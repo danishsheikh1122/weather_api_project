@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 22px;
+}
+
+:root {
+  --themeClr: rgb(255, 187, 0);
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(247, 247, 247);
+  gap: 2rem;
+  font-family: "exo 2";
+}
+body nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 30rem;
+  height: 3.4rem;
+  color: gray;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+body nav .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+body nav .left i {
+  font-size: 1.8rem;
+  color: var(--themeClr);
+}
+body nav a {
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+}
+body nav a span {
+  position: relative;
+  z-index: 2;
+}
+body nav a:after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 10%;
+  background: #dedede;
+  transition: all 0.35s;
+}
+body nav a:hover {
+  color: var(--themeClr);
+}
+body nav a:hover:after {
+  width: 100%;
+}
+body nav a:hover {
+  cursor: pointer;
+}
+body .container {
+  width: 40rem;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .container .search {
+  width: 50%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  border: 2px solid gray;
+  border-radius: 2rem;
+}
+body .container .search i {
+  font-size: 1.6rem;
+  color: gray;
+}
+body .container .search i:hover {
+  cursor: pointer;
+  color: var(--themeClr);
+}
+body .container .search input {
+  background-color: transparent;
+  font-size: 1.2rem;
+  border: none;
+  width: 80%;
+  height: 100%;
+  outline: none;
+  color: gray;
+  text-transform: capitalize;
+}
+body .container .search:hover {
+  border: 2px solid var(--themeClr);
+}
+body .container .date {
+  width: 100%;
+  height: 2rem;
+  padding: 0 10rem;
+  padding-top: 0.6rem;
+  display: flex;
+  justify-content: flex-end;
+  color: gray;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+body .container .loading {
+  display: none;
+  animation: load 0.5s linear infinite alternate;
+}
+body .container .main {
+  margin-top: 2rem;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border: 2px solid gray;
+  border-radius: 2rem;
+}
+body .container .main .top {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+body .container .main .top > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+body .container .main .top .left {
+  width: 100%;
+  height: 100%;
+  color: gray;
+  gap: 1rem;
+}
+body .container .main .top .left #temp {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  color: var(--themeClr);
+}
+body .container .main .top .left #type {
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  text-transform: capitalize;
+  font-weight: 200;
+}
+body .container .main .top .right {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+  text-transform: capitalize;
+}
+body .container .main .top .right #city_name {
+  width: 100%;
+  height: 30%;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .container .main .top .right #country_name {
+  width: 100%;
+  height: 30%;
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .container .main .bottom {
+  width: 80%;
+  height: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(255, 187, 0, 0.6);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+body .container .main .bottom > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(100, 100, 100);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+@keyframes load {
+  0% {
+    background-color: rgb(255, 255, 255);
+  }
+  100% {
+    background-color: rgba(221, 221, 221, 0.78);
+  }
+}/*# sourceMappingURL=async-await.css.map */
